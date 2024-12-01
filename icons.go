@@ -25,7 +25,7 @@ type Props struct {
 	Color  string
 	Fill   string
 	Stroke string
-	Class  string
+	Class  string // extra TailwindCSS classes, e.g. text-blue-500
 }
 
 // Icon returns a function that generates a templ.Component for the specified icon.
