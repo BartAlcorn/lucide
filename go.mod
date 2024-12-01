@@ -1,4 +1,4 @@
-module github.com/BartAlcorn/lucide
+module github.com/bartalcorn/lucide
 
 go 1.23.3
 
