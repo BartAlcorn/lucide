@@ -1,0 +1,12 @@
+package icons
+
+templ CircleSlash2(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M22 2 2 22"></path>
+		<circle cx="12" cy="12" r="10"></circle>
+	}
+}

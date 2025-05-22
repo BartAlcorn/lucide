@@ -1,0 +1,12 @@
+package icons
+
+templ Parentheses(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M8 21s-4-3-4-9 4-9 4-9"></path>
+		<path d="M16 3s4 3 4 9-4 9-4 9"></path>
+	}
+}

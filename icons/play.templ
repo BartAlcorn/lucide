@@ -1,0 +1,11 @@
+package icons
+
+templ Play(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<polygon points="6 3 20 12 6 21 6 3"></polygon>
+	}
+}

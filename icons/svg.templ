@@ -1,0 +1,35 @@
+package icons
+
+import (
+	"fmt"
+	"strconv"
+)
+
+templ SVG(p ...Props) {
+	{{ var props Props }}
+	if len(p) > 0 {
+		{{ props = p[0] }}
+	}
+	<div class={ props.color() }>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width={ fmt.Sprintf("%d", props.size()) }
+			height={ fmt.Sprintf("%d", props.size()) }
+			viewBox="0 0 24 24"
+			fill={ fmt.Sprintf("%s", props.fill()) }
+			stroke={ fmt.Sprintf("%s", props.strokeColor()) }
+			stroke-width={ strconv.FormatFloat(props.strokeWidth(), 'f', -1, 64) }
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			if props.ID !="" {
+				id={ props.ID }
+			}
+			if props.Class !="" {
+				class={ props.Class }
+			}
+			{ props.Attrs... }
+		>
+			{ children... }
+		</svg>
+	</div>
+}

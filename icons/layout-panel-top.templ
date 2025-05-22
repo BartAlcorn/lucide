@@ -1,0 +1,13 @@
+package icons
+
+templ LayoutPanelTop(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="18" height="7" x="3" y="3" rx="1"></rect>
+		<rect width="7" height="7" x="3" y="14" rx="1"></rect>
+		<rect width="7" height="7" x="14" y="14" rx="1"></rect>
+	}
+}

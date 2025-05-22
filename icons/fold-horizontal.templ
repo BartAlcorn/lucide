@@ -1,0 +1,18 @@
+package icons
+
+templ FoldHorizontal(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M2 12h6"></path>
+		<path d="M22 12h-6"></path>
+		<path d="M12 2v2"></path>
+		<path d="M12 8v2"></path>
+		<path d="M12 14v2"></path>
+		<path d="M12 20v2"></path>
+		<path d="m19 9-3 3 3 3"></path>
+		<path d="m5 15 3-3-3-3"></path>
+	}
+}

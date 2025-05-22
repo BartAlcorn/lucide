@@ -1,0 +1,15 @@
+package icons
+
+templ Barcode(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M3 5v14"></path>
+		<path d="M8 5v14"></path>
+		<path d="M12 5v14"></path>
+		<path d="M17 5v14"></path>
+		<path d="M21 5v14"></path>
+	}
+}

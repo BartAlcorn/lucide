@@ -1,0 +1,39 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "templ": "html"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.templ": "templ",
+    "*.zsh": "shellscript"
+  },
+  "files.exclude": {
+    "**/*_templ.go": true,
+    "**/*_templ.txt": true
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": {
+    "analyses": {
+      "composites": false
+    }
+  },
+  "[templ]": {
+    "editor.defaultFormatter": "a-h.templ",
+    "editor.hover.enabled": true,
+    "log": "./templ.log",
+    "goplsLog": "./gopls.log",
+  },
+  "tailwindCSS.includeLanguages": {
+    "templ": "html"
+  },
+  "markdownlint.config": {
+    "MD033": {
+      "allowed_elements": ["br", "nobr", "sup", "a"]
+    }
+  },
+  "git.ignoreLimitWarning": true
+}

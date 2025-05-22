@@ -1,0 +1,12 @@
+package icons
+
+templ TrendingDown(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+		<polyline points="16 17 22 17 22 11"></polyline>
+	}
+}

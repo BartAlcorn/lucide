@@ -19,20 +19,15 @@ var (
 //go:embed content/*.svg
 var iconFS embed.FS
 
-// Props defines the properties that can be set for an icon.
-type Props struct {
-	Size   string
-	Color  string
-	Fill   string
-	Stroke string
-	Class  string // extra TailwindCSS classes, e.g. text-blue-500
-}
-
 // Icon returns a function that generates a templ.Component for the specified icon.
-func Icon(name string) func(Props) templ.Component {
-	return func(props Props) templ.Component {
+func Icon(name string) func(props ...Props) templ.Component {
+	return func(props ...Props) templ.Component {
+		var p Props
+		if len(props) > 0 {
+			p = props[0]
+		}
 		return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
-			svg, err := generateSVG(name, props)
+			svg, err := generateSVG(name, p)
 			if err != nil {
 				return err
 			}
@@ -49,10 +44,7 @@ func generateSVG(name string, props Props) (string, error) {
 		return "", err
 	}
 
-	size := props.Size
-	if size == "" {
-		size = "24"
-	}
+	size := props.size()
 
 	fill := props.Fill
 	if fill == "" {
@@ -67,8 +59,9 @@ func generateSVG(name string, props Props) (string, error) {
 		stroke = "currentColor"
 	}
 
-	return fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="%s" height="%s" viewBox="0 0 24 24" fill="%s" stroke="%s" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="%s" data-lucide="icon">%s</svg>`,
-		size, size, fill, stroke, props.Class, content), nil
+	return fmt.Sprintf(
+		`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 24 24" fill="%s" stroke="%s" stroke-width="%.2f" stroke-linecap="round" stroke-linejoin="round" class="%s" data-lucide="icon">%s</svg>`,
+		size, size, fill, props.strokeColor(), props.strokeWidth(), props.Class, content), nil
 }
 
 // getIconContent retrieves the content of an icon, loading it if necessary.

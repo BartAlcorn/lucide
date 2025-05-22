@@ -1,0 +1,11 @@
+package icons
+
+templ Tally1(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M4 4v16"></path>
+	}
+}

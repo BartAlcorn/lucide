@@ -1,0 +1,13 @@
+package icons
+
+templ Touchpad(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+		<path d="M2 14h20"></path>
+		<path d="M12 20v-6"></path>
+	}
+}

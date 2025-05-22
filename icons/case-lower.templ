@@ -1,0 +1,14 @@
+package icons
+
+templ CaseLower(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="7" cy="12" r="3"></circle>
+		<path d="M10 9v6"></path>
+		<circle cx="17" cy="12" r="3"></circle>
+		<path d="M14 7v8"></path>
+	}
+}

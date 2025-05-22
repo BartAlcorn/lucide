@@ -1,0 +1,12 @@
+package icons
+
+templ SkipBack(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<polygon points="19 20 9 12 19 4 19 20"></polygon>
+		<line x1="5" x2="5" y1="19" y2="5"></line>
+	}
+}

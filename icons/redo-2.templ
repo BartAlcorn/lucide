@@ -1,0 +1,12 @@
+package icons
+
+templ Redo2(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m15 14 5-5-5-5"></path>
+		<path d="M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13"></path>
+	}
+}

@@ -1,0 +1,12 @@
+package icons
+
+templ TvMinimal(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M7 21h10"></path>
+		<rect width="20" height="14" x="2" y="3" rx="2"></rect>
+	}
+}

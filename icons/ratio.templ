@@ -1,0 +1,12 @@
+package icons
+
+templ Ratio(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="12" height="20" x="6" y="2" rx="2"></rect>
+		<rect width="20" height="12" x="2" y="6" rx="2"></rect>
+	}
+}

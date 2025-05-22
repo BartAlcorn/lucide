@@ -1,0 +1,12 @@
+package icons
+
+templ Copyright(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+	}
+}

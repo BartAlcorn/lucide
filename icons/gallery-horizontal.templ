@@ -1,0 +1,13 @@
+package icons
+
+templ GalleryHorizontal(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M2 3v18"></path>
+		<rect width="12" height="18" x="6" y="3" rx="2"></rect>
+		<path d="M22 3v18"></path>
+	}
+}

@@ -1,0 +1,12 @@
+package icons
+
+templ Tv(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="20" height="15" x="2" y="7" rx="2" ry="2"></rect>
+		<polyline points="17 2 12 7 7 2"></polyline>
+	}
+}

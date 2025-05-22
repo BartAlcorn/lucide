@@ -1,0 +1,14 @@
+package icons
+
+templ NonBinary(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M12 2v10"></path>
+		<path d="m8.5 4 7 4"></path>
+		<path d="m8.5 8 7-4"></path>
+		<circle cx="12" cy="17" r="5"></circle>
+	}
+}

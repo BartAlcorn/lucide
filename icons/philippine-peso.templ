@@ -1,0 +1,13 @@
+package icons
+
+templ PhilippinePeso(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M20 11H4"></path>
+		<path d="M20 7H4"></path>
+		<path d="M7 21V4a1 1 0 0 1 1-1h4a1 1 0 0 1 0 12H7"></path>
+	}
+}

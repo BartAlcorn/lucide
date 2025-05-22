@@ -1,0 +1,13 @@
+package icons
+
+templ Divide(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="6" r="1"></circle>
+		<line x1="5" x2="19" y1="12" y2="12"></line>
+		<circle cx="12" cy="18" r="1"></circle>
+	}
+}

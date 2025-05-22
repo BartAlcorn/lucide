@@ -1,0 +1,13 @@
+package icons
+
+templ Target(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<circle cx="12" cy="12" r="6"></circle>
+		<circle cx="12" cy="12" r="2"></circle>
+	}
+}

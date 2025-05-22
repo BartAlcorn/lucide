@@ -1,0 +1,12 @@
+package icons
+
+templ ArrowDown(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M12 5v14"></path>
+		<path d="m19 12-7 7-7-7"></path>
+	}
+}

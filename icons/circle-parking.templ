@@ -1,0 +1,12 @@
+package icons
+
+templ CircleParking(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path>
+	}
+}

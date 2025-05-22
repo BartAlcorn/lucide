@@ -1,0 +1,12 @@
+package icons
+
+templ Copyleft(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<path d="M9.17 14.83a4 4 0 1 0 0-5.66"></path>
+	}
+}

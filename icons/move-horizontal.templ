@@ -1,0 +1,13 @@
+package icons
+
+templ MoveHorizontal(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m18 8 4 4-4 4"></path>
+		<path d="M2 12h20"></path>
+		<path d="m6 8-4 4 4 4"></path>
+	}
+}

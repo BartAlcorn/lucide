@@ -1,0 +1,13 @@
+package icons
+
+templ CircleX(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<path d="m15 9-6 6"></path>
+		<path d="m9 9 6 6"></path>
+	}
+}

@@ -1,0 +1,12 @@
+package icons
+
+templ Axis3d(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M4 4v16h16"></path>
+		<path d="m4 20 7-7"></path>
+	}
+}

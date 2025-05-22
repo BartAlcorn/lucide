@@ -1,0 +1,13 @@
+package icons
+
+templ BetweenVerticalEnd(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="7" height="13" x="3" y="3" rx="1"></rect>
+		<path d="m9 22 3-3 3 3"></path>
+		<rect width="7" height="13" x="14" y="3" rx="1"></rect>
+	}
+}

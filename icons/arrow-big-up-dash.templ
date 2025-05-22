@@ -1,0 +1,12 @@
+package icons
+
+templ ArrowBigUpDash(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M9 19h6"></path>
+		<path d="M9 15v-3H5l7-7 7 7h-4v3H9z"></path>
+	}
+}

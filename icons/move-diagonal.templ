@@ -1,0 +1,13 @@
+package icons
+
+templ MoveDiagonal(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M11 19H5v-6"></path>
+		<path d="M13 5h6v6"></path>
+		<path d="M19 5 5 19"></path>
+	}
+}

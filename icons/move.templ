@@ -1,0 +1,16 @@
+package icons
+
+templ Move(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M12 2v20"></path>
+		<path d="m15 19-3 3-3-3"></path>
+		<path d="m19 9 3 3-3 3"></path>
+		<path d="M2 12h20"></path>
+		<path d="m5 9-3 3 3 3"></path>
+		<path d="m9 5 3-3 3 3"></path>
+	}
+}

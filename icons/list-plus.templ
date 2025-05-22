@@ -1,0 +1,15 @@
+package icons
+
+templ ListPlus(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M11 12H3"></path>
+		<path d="M16 6H3"></path>
+		<path d="M16 18H3"></path>
+		<path d="M18 9v6"></path>
+		<path d="M21 12h-6"></path>
+	}
+}

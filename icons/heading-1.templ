@@ -1,0 +1,14 @@
+package icons
+
+templ Heading1(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M4 12h8"></path>
+		<path d="M4 18V6"></path>
+		<path d="M12 18V6"></path>
+		<path d="m17 12 3-2v8"></path>
+	}
+}

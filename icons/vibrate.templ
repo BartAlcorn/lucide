@@ -1,0 +1,13 @@
+package icons
+
+templ Vibrate(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m2 8 2 2-2 2 2 2-2 2"></path>
+		<path d="m22 8-2 2 2 2-2 2 2 2"></path>
+		<rect width="8" height="14" x="8" y="5" rx="1"></rect>
+	}
+}

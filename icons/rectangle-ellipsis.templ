@@ -1,0 +1,14 @@
+package icons
+
+templ RectangleEllipsis(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="20" height="12" x="2" y="6" rx="2"></rect>
+		<path d="M12 12h.01"></path>
+		<path d="M17 12h.01"></path>
+		<path d="M7 12h.01"></path>
+	}
+}

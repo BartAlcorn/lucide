@@ -1,0 +1,14 @@
+package icons
+
+templ AppWindowMac(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+		<path d="M6 8h.01"></path>
+		<path d="M10 8h.01"></path>
+		<path d="M14 8h.01"></path>
+	}
+}

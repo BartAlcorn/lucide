@@ -1,0 +1,12 @@
+package icons
+
+templ Music2(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="8" cy="18" r="4"></circle>
+		<path d="M12 18V2l7 4"></path>
+	}
+}

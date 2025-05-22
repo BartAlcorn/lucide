@@ -1,0 +1,13 @@
+package icons
+
+templ AlignLeft(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M15 12H3"></path>
+		<path d="M17 18H3"></path>
+		<path d="M21 6H3"></path>
+	}
+}

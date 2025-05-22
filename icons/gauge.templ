@@ -1,0 +1,12 @@
+package icons
+
+templ Gauge(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m12 14 4-4"></path>
+		<path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
+	}
+}

@@ -1,0 +1,13 @@
+package icons
+
+templ AlignHorizontalJustifyCenter(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="6" height="14" x="2" y="5" rx="2"></rect>
+		<rect width="6" height="10" x="16" y="7" rx="2"></rect>
+		<path d="M12 2v20"></path>
+	}
+}

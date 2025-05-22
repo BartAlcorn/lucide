@@ -1,0 +1,12 @@
+package icons
+
+templ Clock7(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<polyline points="12 6 12 12 9.5 16"></polyline>
+	}
+}

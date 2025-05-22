@@ -1,0 +1,12 @@
+package icons
+
+templ ChevronLast(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m7 18 6-6-6-6"></path>
+		<path d="M17 6v12"></path>
+	}
+}

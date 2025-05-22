@@ -1,0 +1,12 @@
+package icons
+
+templ CircleStop(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<rect x="9" y="9" width="6" height="6" rx="1"></rect>
+	}
+}

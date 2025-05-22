@@ -1,0 +1,13 @@
+package icons
+
+templ CircleArrowDown(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<path d="M12 8v8"></path>
+		<path d="m8 12 4 4 4-4"></path>
+	}
+}

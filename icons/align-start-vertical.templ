@@ -1,0 +1,13 @@
+package icons
+
+templ AlignStartVertical(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<rect width="9" height="6" x="6" y="14" rx="2"></rect>
+		<rect width="16" height="6" x="6" y="4" rx="2"></rect>
+		<path d="M2 2v20"></path>
+	}
+}

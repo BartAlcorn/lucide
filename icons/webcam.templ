@@ -1,0 +1,14 @@
+package icons
+
+templ Webcam(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="10" r="8"></circle>
+		<circle cx="12" cy="10" r="3"></circle>
+		<path d="M7 22h10"></path>
+		<path d="M12 22v-4"></path>
+	}
+}

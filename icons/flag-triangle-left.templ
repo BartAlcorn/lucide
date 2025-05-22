@@ -1,0 +1,11 @@
+package icons
+
+templ FlagTriangleLeft(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M17 22V2L7 7l10 5"></path>
+	}
+}

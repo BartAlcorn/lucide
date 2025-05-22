@@ -1,0 +1,12 @@
+package icons
+
+templ DollarSign(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<line x1="12" x2="12" y1="2" y2="22"></line>
+		<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+	}
+}

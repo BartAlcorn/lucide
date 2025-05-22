@@ -1,0 +1,12 @@
+package icons
+
+templ Crop(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M6 2v14a2 2 0 0 0 2 2h14"></path>
+		<path d="M18 22V8a2 2 0 0 0-2-2H2"></path>
+	}
+}

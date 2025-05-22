@@ -1,0 +1,30 @@
+package lucide
+
+import "fmt"
+
+templ SVG(p ...Props) {
+	{{ var props Props }}
+	if len(p) > 0 {
+		{{ props = p[0] }}
+	}
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={ fmt.Sprintf("%d", props.size()) }
+		height={ fmt.Sprintf("%d", props.size()) }
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke={ fmt.Sprintf("%s", props.color()) }
+		stroke-width={ fmt.Sprintf("%f", props.strokeWidth()) }
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		if props.ID !="" {
+			id={ props.ID }
+		}
+		if props.Class !="" {
+			class={ props.Class }
+		}
+		{ props.Attrs... }
+	>
+		{ children... }
+	</svg>
+}

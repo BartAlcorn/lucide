@@ -1,0 +1,11 @@
+package icons
+
+templ Dot(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12.1" cy="12.1" r="1"></circle>
+	}
+}

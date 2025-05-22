@@ -1,0 +1,14 @@
+package icons
+
+templ Move3d(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M5 3v16h16"></path>
+		<path d="m5 19 6-6"></path>
+		<path d="m2 6 3-3 3 3"></path>
+		<path d="m18 16 3 3-3 3"></path>
+	}
+}

@@ -1,0 +1,14 @@
+package icons
+
+templ DecimalsArrowLeft(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m13 21-3-3 3-3"></path>
+		<path d="M20 18H10"></path>
+		<path d="M3 11h.01"></path>
+		<rect x="6" y="3" width="5" height="8" rx="2.5"></rect>
+	}
+}

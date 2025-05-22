@@ -1,0 +1,15 @@
+package icons
+
+templ ChevronsLeftRightEllipsis(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="m18 8 4 4-4 4"></path>
+		<path d="m6 8-4 4 4 4"></path>
+		<path d="M8 12h.01"></path>
+		<path d="M12 12h.01"></path>
+		<path d="M16 12h.01"></path>
+	}
+}

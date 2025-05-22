@@ -1,0 +1,13 @@
+package icons
+
+templ MessageCirclePlus(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+		<path d="M8 12h8"></path>
+		<path d="M12 8v8"></path>
+	}
+}

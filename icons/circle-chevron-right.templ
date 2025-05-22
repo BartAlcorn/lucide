@@ -1,0 +1,12 @@
+package icons
+
+templ CircleChevronRight(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<circle cx="12" cy="12" r="10"></circle>
+		<path d="m10 8 4 4-4 4"></path>
+	}
+}

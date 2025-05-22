@@ -1,0 +1,12 @@
+package icons
+
+templ Reply(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<polyline points="9 17 4 12 9 7"></polyline>
+		<path d="M20 18v-2a4 4 0 0 0-4-4H4"></path>
+	}
+}

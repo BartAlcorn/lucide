@@ -1,0 +1,13 @@
+package icons
+
+templ Diff(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M12 3v14"></path>
+		<path d="M5 10h14"></path>
+		<path d="M5 21h14"></path>
+	}
+}

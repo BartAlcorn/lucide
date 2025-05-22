@@ -1,0 +1,12 @@
+package icons
+
+templ RussianRuble(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<path d="M6 11h8a4 4 0 0 0 0-8H9v18"></path>
+		<path d="M6 15h8"></path>
+	}
+}

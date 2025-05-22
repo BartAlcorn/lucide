@@ -1,0 +1,12 @@
+package icons
+
+templ CornerLeftUp(props ...Props) {
+	{{ var p Props }}
+	if len(props) > 0 {
+		{{ p = props[0] }}
+	}
+	@SVG(p) {
+		<polyline points="14 9 9 4 4 9"></polyline>
+		<path d="M20 20h-7a4 4 0 0 1-4-4V4"></path>
+	}
+}
